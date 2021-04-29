@@ -60,7 +60,7 @@ resource "aws_security_group" "acceso-http-wordpress-sg" {
     from_port   = 80
     to_port     = 80
     protocol    = "tcp"
-    cidr_blocks = [aws_subnet.Public-subnet-1.id, aws_subnet.Public-subnet-2.id]
+    cidr_blocks = ["172.16.3.0/24", "172.16.1.0/24"]
 
   }
 
