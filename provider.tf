@@ -3,14 +3,14 @@ provider "aws" {
   profile = "default"
 }
 ##Guardar estado en bucket s3
-terraform {
-  backend "s3" {
-    bucket = "terraform-state-grupo-1"
-    key    = "trabajando-terraform.tfstate"
-    dynamodb_table = "TerraformCloudLock"
-    region = "us-east-1"
-  }
-}
+# terraform {
+#   backend "s3" {
+#     bucket = "terraform-state-grupo-1"
+#     key    = "trabajando-terraform.tfstate"
+#     dynamodb_table = "TerraformCloudLock"
+#     region = "us-east-1"
+#   }
+# }
 
 ##Tabla dynamo para bloquear estado
 # resource "aws_dynamodb_table" "dynamodb_terraform_cloud_lock" {
